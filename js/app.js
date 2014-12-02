@@ -7,9 +7,11 @@
 */
 angular.module('AddressBook', [])
     .controller('AddressController', function($scope) {
+		//initializes variables with list of employees for access to control
         $scope.employees = pawneeEmployees;
-        $scope.sortCol = 'lastName';
-        //controller initialization goes here
+        //sets up sort column in scope
+		$scope.sortCol = 'lastName';
+        //controller initialization
         $scope.sortBy = function(sortCol) {
             if ($scope.sortCol == sortCol) {
                 $scope.sortReverse = !$scope.sortReverse;
